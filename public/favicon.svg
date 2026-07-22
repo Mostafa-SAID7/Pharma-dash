@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <!-- Background gradient circle -->
+  <defs>
+    <linearGradient id="pillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="capsuleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e84393;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e84393;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Outer circle background -->
+  <circle cx="90" cy="90" r="85" fill="url(#pillGradient)" opacity="0.15"/>
+  
+  <!-- Rounded pill bottle shape -->
+  <g filter="url(#shadow)">
+    <!-- Bottle cap -->
+    <rect x="70" y="30" width="40" height="12" rx="2" fill="#2d3748" />
+    <rect x="68" y="42" width="44" height="6" rx="1" fill="#4a5568" />
+    
+    <!-- Bottle neck -->
+    <path d="M 75 48 L 75 60 Q 75 65 80 65 L 100 65 Q 105 65 105 60 L 105 48" fill="url(#pillGradient)" stroke="#667eea" stroke-width="1.5"/>
+    
+    <!-- Main bottle body - rounded rectangle -->
+    <path d="M 65 65 L 65 125 Q 65 145 90 150 Q 115 145 115 125 L 115 65 Q 115 60 110 60 L 70 60 Q 65 60 65 65" fill="url(#pillGradient)" stroke="#667eea" stroke-width="1.5"/>
+    
+    <!-- Bottle shine/highlight -->
+    <ellipse cx="75" cy="90" rx="8" ry="30" fill="white" opacity="0.25"/>
+  </g>
+
+  <!-- Pills inside bottle -->
+  <g>
+    <!-- Red capsule -->
+    <ellipse cx="80" cy="95" rx="6" ry="10" fill="url(#capsuleGradient)" filter="url(#shadow)"/>
+    
+    <!-- Purple pill -->
+    <rect x="95" y="100" width="12" height="8" rx="4" fill="#a855f7" filter="url(#shadow)"/>
+    
+    <!-- Blue pill -->
+    <circle cx="75" cy="115" r="4" fill="#3b82f6" filter="url(#shadow)"/>
+  </g>
+
+  <!-- Rx symbol overlay (prescription) -->
+  <g transform="translate(120, 145)" opacity="0.8">
+    <!-- R -->
+    <path d="M 2 2 L 2 12 M 2 2 L 8 2 Q 10 2 10 4 Q 10 6 8 6 L 2 6 M 10 6 L 14 12" stroke="#e84393" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- x -->
+    <line x1="18" y1="6" x2="24" y2="12" stroke="#e84393" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="24" y1="6" x2="18" y2="12" stroke="#e84393" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Glow effect around bottle -->
+  <circle cx="90" cy="90" r="75" fill="none" stroke="url(#pillGradient)" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+</svg>
